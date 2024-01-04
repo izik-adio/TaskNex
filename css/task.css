@@ -1,0 +1,110 @@
+.taskContainer {
+  border-radius: 10px;
+  background-color: var(--input-bg-color);
+  width: min(100%, 20rem - 2vw);
+  height: 96svh;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#taskHeader {
+  font-weight: 600;
+  font-size: var(--h2-font-size);
+  color: var(--h2-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+#taskHeader span {
+  color: var(--h2-color);
+  font-weight: 700;
+}
+#todoTitle,
+#todoDetails {
+  background-color: var(--input-bg-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.4rem;
+  border-color: var(--header-color);
+  border-width: 1.5px;
+  outline: none;
+  resize: none;
+  border-radius: 6px;
+}
+#todoDetails {
+  height: 8rem;
+  margin-bottom: 1.4rem;
+}
+.priorityContainer,
+.categoryContainer,
+.dueDate {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 0.3rem;
+  gap: 0.5rem;
+}
+
+.taskContainer h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--input-color);
+  width: 37%;
+}
+
+.priorityContainer select,
+.categoryContainer input,
+.dueDate input {
+  border-color: var(--header-color);
+  border-width: 1.5px;
+  outline: none;
+  border-radius: 4px;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  color: var(--input-color);
+  background-color: var(--input-bg-color);
+}
+
+.taskFooter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  justify-self: flex-end;
+  margin-top: auto;
+}
+.taskFooter button {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 7px;
+  border-color: var(--header-color);
+  color: var(--header-color);
+  background-color: var(--input-color);
+}
+#saveTask {
+  color: var(--input-color);
+  background-color: #ff9900;
+}
+#closeTask {
+  cursor: pointer;
+  position: relative;
+}
+#closeTask::before {
+  content: "";
+  translate: -17% 57%;
+  transform: translateY(-48%);
+  position: absolute;
+  inset: 0;
+  height: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--h2-color);
+  opacity: 0.3;
+}
+
+.hideTask {
+  display: none;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/task.css" />
+    <link rel="stylesheet" href="./css/an.css" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <main>
+      <aside id="menu"></aside>
+      <section id="today">
+        <h1 id="todoHeader">Today <span id="todayCount">0</span></h1>
+        <div class="todosContainer">
+          <h3 class="addTask"><span id="newTask">&plus;</span> Add New Task</h3>
+          <div id="todoList">
+            <template>
+              <div class="todoContainer">
+                <div class="taskSummaryTitle">
+                  <input type="checkbox" name="task" class="task" />
+                  <label for="task" class="todo">My First Task</label>
+                </div>
+                <div class="taskBody">
+                  <p class="taskdate">22-03-22</p>
+                  <p class="taskcategory">Personal</p>
+                  <p class="taskpriority">High</p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+      <section id="tomorrow">
+        <h1 id="todoHeader">Tomorrow <span id="tomorrowCount">0</span></h1>
+        <div class="todosContainer">
+          <h3 class="addTask"><span id="newTask">&plus;</span> Add New Task</h3>
+          <div id="todoList" class="tomorrowList">
+            <template>
+              <div class="todoContainer">
+                <div class="taskSummaryTitle">
+                  <input type="checkbox" name="task" class="task" />
+                  <label for="task" class="todo">My First Task</label>
+                </div>
+                <div class="taskBody">
+                  <p class="taskdate">22-03-22</p>
+                  <p class="taskcategory">Personal</p>
+                  <p class="taskpriority">High</p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+      <section id="later">
+        <h1 id="todoHeader">Later <span id="laterCount">0</span></h1>
+        <div class="todosContainer">
+          <h3 class="addTask"><span id="newTask">&plus;</span> Add New Task</h3>
+          <div id="todoList" class="laterList">
+            <template>
+              <div class="todoContainer">
+                <div class="taskSummaryTitle">
+                  <input type="checkbox" name="task" class="task" />
+                  <label for="task" class="todo">My First Task</label>
+                </div>
+                <div class="taskBody">
+                  <p class="taskdate">22-03-22</p>
+                  <p class="taskcategory">Personal</p>
+                  <p class="taskpriority">High</p>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+      <section class="taskContainer">
+        <h2 id="taskHeader">Task: <span id="closeTask">&times;</span></h2>
+        <input
+          id="todoTitle"
+          name="todoTitle"
+          type="text"
+          placeholder="Enter Task Title"
+          required
+          autofocus
+        />
+        <textarea
+          name="todoDetails"
+          id="todoDetails"
+          placeholder="Add Task Details (Optional)"
+        ></textarea>
+        <div class="priorityContainer">
+          <h4>Priority Level</h4>
+          <select name="priority" id="priority">
+            <option value="High">High</option>
+            <option aria-selected="true" value="Medium" selected>Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+        <div class="categoryContainer">
+          <h4>Category</h4>
+          <input type="text" name="category" id="category" />
+        </div>
+        <div class="dueDate">
+          <h4>Due date</h4>
+          <input type="date" name="dueDate" min="" id="dueDate" required />
+        </div>
+        <div class="taskFooter">
+          <button id="deleteTask">Delete Task</button>
+          <button id="saveTask">Save Changes</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./JavaScript/scripts.js"></script>
+  </body>
+</html>
