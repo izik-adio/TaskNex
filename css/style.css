@@ -1,105 +1,138 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
-  color: #000000;
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-  --h1-color: rgb(14, 13, 13);
+  --primary-color: #007bff;
+  --secondary-color: #dc3545;
+  --success-color: #28a745;
+  --light-color: #f9f9f9;
+  --dark-color: #333;
+  --grey-color: #777;
+  --padding: 1.25rem;
+  --padding-half: 0.625rem;
   --h1-font-size: calc(1.5rem + 0.6vw);
-  --h2-color: rgba(0, 0, 0, 0.671);
   --h2-font-size: calc(1.3rem + 0.5vw);
-  --input-bg-color: #f5f5f5;
-  --header-color: #cac9c9d7;
   --input-color: #2b2b2b;
-  --p-font: 0.9rem;
+  --p-font: 0.85rem;
 }
 body {
-  background-color: #ffffff;
+  background-color: var(--light-color);
 }
 main {
-  width: 100%;
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-rows: auto;
-  padding: 1rem;
-}
-#today,
-#tomorrow,
-#later {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  min-width: calc(20rem);
+  gap: 2rem;
+  justify-content: space-around;
+  padding: var(--padding);
+}
+/* #menu {
+  flex: 1;
+  border-right: 1px solid #ddd;
+  padding: var(--padding);
+} */
+section {
+  flex: 3;
+  margin-left: var(--padding);
+  margin-bottom: 50rem;
 }
 #todoHeader {
-  color: var(--h1-color);
-  font-size: var(--h1-font-size);
+  border-bottom: 1px solid #ddd;
+  color: var(--dark-color);
   display: flex;
   flex-flow: row nowrap;
+  font-size: var(--h1-font-size);
   gap: 2rem;
-}
-#taskCount {
-  font-weight: 500;
-  text-align: center;
-  max-height: 90%;
-  width: 1.5rem;
-  border: 0.5px solid var(--input-bg-color);
-  border-radius: 3px;
-  color: var(--input-color);
+  padding-bottom: var(--padding-half);
 }
 
 .todosContainer {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
+  background: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin-top: var(--padding-half);
+  padding: var(--padding);
+  transition: all 0.3s ease-in-out;
 }
+.todosContainer:hover {
+  transform: scale(1.015);
+}
+
 .addTask {
+  align-items: center;
+  background: var(--primary-color);
+  border-radius: 5px;
+  border: 1px solid var(--input-bg-color);
+  color: #fff;
   cursor: pointer;
-  width: 100%;
+  display: flex;
   font-size: var(--p-font);
   font-weight: 500;
-  color: var(--input-color);
-  padding: 0.5rem 1rem;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  gap: 1rem;
-  border: 1px solid var(--input-bg-color);
-  border-radius: 3px;
+  justify-content: center;
+  padding: var(--padding-half);
+  transition: background 0.3s ease-in-out;
 }
+
+.addTask:hover {
+  background: #015dc0;
+}
+
 #newTask {
-  color: var(--input-color);
+  margin-right: 15px;
 }
-.todoList {
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
-}
+
 .todoContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   font-size: var(--p-font);
+  font-weight: 600;
+  margin-top: var(--padding-half);
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+.todoContainer:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .taskSummaryTitle {
+  align-items: center;
   display: flex;
-  /* flex-flow: row nowrap; */
   gap: 0.75rem;
 }
-.todo,
-.taskBody p {
-  opacity: 0.8;
-  color: var(--input-color);
-}
+
 .taskBody {
+  font-size: var(--p-font);
   font-weight: 300;
   padding: 0.2rem 1.6rem;
   display: flex;
   flex-flow: row nowrap;
-  gap: 1.5rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--padding-half);
+}
+.todo {
+  font-weight: bold;
+}
+
+.taskdate,
+.taskcategory,
+.taskpriority {
+  word-wrap: none;
+  white-space: nowrap;
+  color: var(--grey-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  #menu,
+  section {
+    margin: 0;
+  }
 }
