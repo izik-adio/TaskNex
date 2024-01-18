@@ -1,6 +1,6 @@
-# WebDoer - Task Manager
+# TaskNex
 
-WebDoer is a dynamic task management web app designed for efficiency and style. Organize your life effortlessly with features like drag-and-drop, priority levels, and a sleek dark mode. While it's still in development and not all features are implemented, it's already shaping up to be a powerful tool.
+TaskNex is a dynamic task management web app designed for efficiency and style. Organize your life effortlessly with features like drag-and-drop, priority levels, and a sleek dark mode. While it's still in development and not all features are implemented, it's already shaping up to be a powerful tool.
 
 ## Key Features
 
@@ -13,13 +13,13 @@ WebDoer is a dynamic task management web app designed for efficiency and style. 
 
 ## Getting Started
 
-To experience WebDoer, simply [click here](https://webdoer-hub.vercel.app/) to access the live version. No need to clone or set up locally!
+To experience TaskNex, simply [click here](https://tasknex.vercel.app/) to access the live version. No need to clone or set up locally!
 
 Start organizing your tasks right away!
 
 ## Contribution
 
-While I'm currently the sole contributor, WebDoer is open to collaboration. Feel free to explore, contribute, or use it as a reference for your projects. Your input is valuable as I continue to develop and improve the app.
+While I'm currently the sole contributor, TaskNex is open to collaboration. Feel free to explore, contribute, or use it as a reference for your projects. Your input is valuable as I continue to develop and improve the app.
 
 ## License
 
@@ -31,6 +31,6 @@ I'd like to express my gratitude to the open-source community and contributors w
 
 ## Note
 
-WebDoer is still in active development, and not all features have been implemented. Stay tuned for updates!
+TaskNex is still in active development, and not all features have been implemented. Stay tuned for updates!
 
 ---
